@@ -299,6 +299,12 @@ const Op = Sequelize.Op;
  			}).then((coin) => {
 
  				var currentCoins = coin[0].currentCoins - amount;
+ 				
+ 				if(currentCoins < 0)
+ 				{
+ 					currentCoins = 0;
+ 				}
+
  				Coin.update({
 	 				currentCoins : currentCoins
 	 			},

@@ -65,5 +65,6 @@ var async = require("async");
 		function(err, results) {
 		    // results is now equal to ['one', 'two']
 		    console.log("installation Result", results);
+		    res.status(200).send("installation Successfull");
 		});
 	}
